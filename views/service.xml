@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="service_tms_tree" model="ir.ui.view">
+        <field name="name">service.tms.tree</field>
+        <field name="model">service.tms</field>
+        <field name="arch" type="xml">
+            <!-- <tree string="Services" default_order="date_start desc, date_stop desc"> -->
+            <tree string="Services">
+                <field name="name" />
+                <field name="label_service" />
+                <field name="date_start" widget="date" />
+                <field name="date_stop" widget="date" />
+                <field name="state" widget="badge" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="tms_services_form" model="ir.ui.view">
+        <field name="name">tms.services.form</field>
+        <field name="model">service.tms</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="hide_sale_order" invisible="1" />
+                    <field name="hide_purchase_order" invisible="1" />
+                    <button name="button_in_process" string="In Process" class="btn btn-success"
+                        type="object" invisible="state in ['in_process', 'finalized']" />
+                    <button name="button_draft" string="Draft" class="btn btn-warning" type="object"
+                        invisible="state in ['draft']" />
+                    <button name="button_finalized" string="Finalized" class="btn btn-success"
+                        type="object" invisible="state in ['draft', 'finalized']" />
+                    <button name="button_invoiced" string="Invoiced" class="btn btn-warning" type="object"
+                        invisible="state in ['draft','invoiced','in_process']" />
+                    <button name="create_sales_order" string="Create Sales Orders"
+                        class="oe_highlight" type="object" invisible="state not in ['finalized'] or hide_sale_order" />
+                    <button name="create_purchase_order" string="Create Purchases Orders"
+                        class="oe_highlight" type="object" invisible="state not in ['finalized'] or hide_purchase_order" />
+                    <field name="state" widget="statusbar"
+                        statusbar_visible="draft,in_process,finalized" />
+                    
+                </header>
+                <sheet string="Service">
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" type="object" name="action_view_sales_orders"
+                            icon="fa-usd">
+                            <div class="o_form_field o_stat_info">
+                                <span class="o_stat_value">
+                                    <field name="sale_order_count" />
+                                </span>
+                                <span class="o_stat_text">Ventas</span>
+                            </div>
+                        </button>
+                        <button class="oe_stat_button" type="object" name="action_view_customer_invoices"
+                            icon="fa-usd">
+                            <div class="o_form_field o_stat_info">
+                                <span class="o_stat_value">
+                                    <field name="invoice_sale_count" />
+                                </span>
+                                <span class="o_stat_text">Facturas de Cliente</span>
+                            </div>
+                        </button>
+                        <button class="oe_stat_button" type="object"
+                            name="action_view_purchase_orders"
+                            icon="fa-shopping-cart">
+                            <div class="o_form_field o_stat_info">
+                                <span class="o_stat_value">
+                                    <field name="purchase_order_count" />
+                                </span>
+                                <span class="o_stat_text">Compras</span>
+                            </div>
+                        </button>
+                        <button class="oe_stat_button" type="object"
+                            name="action_view_purchase_invoices"
+                            icon="fa-shopping-cart">
+                            <div class="o_form_field o_stat_info">
+                                <span class="o_stat_value">
+                                    <field name="invoice_purchase_count" />
+                                </span>
+                                <span class="o_stat_text">Facturas de Proveedor</span>
+                            </div>
+                        </button>
+                    </div>
+                    <div>
+                        <h2>Service: <field name="name" readonly="True" /> - <field name="distance"
+                                readonly="True" /> KM</h2>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="create_date" readonly="True" />
+                            <field name="label_service" readonly="state == 'finalized'" />
+                            <field name="own_third_freight" readonly="state == 'finalized'" />
+                            
+                        </group>
+                        <group>
+                            <field name="notes" widget="html"
+                                placeholder="Enter your notes here"
+                                readonly="state == 'finalized'" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Detail">
+                            <group>
+                                <group>
+                                    <field name="show_hour" readonly="state == 'finalized'" />
+                                    
+                                </group>
+                                <group>
+                                    <field name="distance" />
+                                    <field name="distance_uploaded" />
+                                    <field name="distance_empty" />
+                                </group>
+                            </group>
+                            <group>
+                                <field name="service_line_ids" nolabel="1" colspan="2"
+                                    invisible="show_hour">
+                                    <tree editable="bottom">
+                                        <field name="date_start" />
+                                        <field name="place_start" />
+                                        <field name="url_place_start" widget="url" />
+                                        <field name="date_end" />
+                                        <field name="place_end" />
+                                        <field name="url_place_end" widget="url" />
+                                        <field name="uploaded" />
+                                        <field name="distance" sum="Total" />
+                                        <field name="note" />
+                                        <field name="service_id" column_invisible="1" />
+                                    </tree>
+                                </field>
+                                <field name="service_line_ids" nolabel="1" colspan="2"
+                                    invisible="not show_hour">
+                                    <tree editable="bottom">
+                                        <field name="date_start" />
+                                        <field name="hour_start" widget="float_time" />
+                                        <field name="place_start" />
+                                        <field name="url_place_start" widget="url" />
+                                        <field name="date_end" />
+                                        <field name="hour_end" widget="float_time" />
+                                        <field name="place_end" />
+                                        <field name="url_place_end" widget="url" />
+                                        <field name="uploaded" />
+                                        <field name="distance" sum="Total" />
+                                        <field name="note" />
+                                        <field name="service_id" column_invisible="1" />
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                        <page string="Sale / Purchase">
+                            <group>
+                                <group>
+                                    <field name="billing_type" widget="radio" />
+                                </group>
+                                <group>
+                                    <field name="distance" invisible="billing_type != 'distance'" />
+                                    <field name="distance_uploaded"
+                                        invisible="billing_type != 'distance'" />
+                                    <field name="distance_empty"
+                                        invisible="billing_type != 'distance'" />
+                                    <field name="tn_loaded" invisible="billing_type != 'ton'" />
+                                    <field name="tn_downloaded" invisible="billing_type != 'ton'" />
+                                    <field name="tn_depletion" invisible="billing_type != 'ton'"
+                                        readonly="True" />
+                                    <field name="tn_gauging" invisible="billing_type != 'ton'" />
+                                    <field name="tn_net" invisible="billing_type != 'ton'" />
+                                </group>
+                            </group>
+                            <group string="Customer">
+                                <field name="customer_ids" nolabel="1" colspan="2"
+                                    context="{'default_operation_type': 'sale'}">
+                                    <tree editable="bottom">
+                                        <field name="customer_id"
+                                            required="operation_type == 'sale'" />
+                                        <field name="currency_id" />
+                                        <field name="product_id" />
+                                        <field name="quantity" string="QTY / KM" />
+                                        <field name="discount" widget="percentage" optional="hide" />
+                                        <field name="price_unit" />
+                                        <field name="amount" />
+                                        <field name="operation_type" column_invisible="1" />
+                                        <field name="sale_service_id" column_invisible="1" />
+                                        <field name="billing_type" column_invisible="1" />
+                                        <field name="sale_order_id" optional="hide" />
+                                        <field name="sale_order_state" optional="hide" />
+                                    </tree>
+                                </field>
+                            </group>
+                            <br />
+                            <group>
+                                <field name="customer_notes" widget="html"
+                                    placeholder="Enter your notes for customers here"
+                                    readonly="state == 'finalized'" />
+                            </group>
+                            <br />
+                            <group string="Supplier" invisible="not own_third_freight">
+                                <field name="supplier_ids" nolabel="1" colspan="2"
+                                    context="{'default_operation_type': 'purchase'}">
+                                    <tree editable="bottom">
+                                        <field name="supplier_id"
+                                            required="operation_type == 'purchase'" />
+                                        <field name="currency_id" />
+                                        <field name="product_id" />
+                                        <field name="quantity" string="QTY / KM" />
+                                        <field name="price_unit" />
+                                        <field name="discount" widget="percentage" optional="hide" />
+                                        <field name="amount" />
+                                        <field name="operation_type" column_invisible="1" />
+                                        <field name="purchase_service_id" column_invisible="1" />
+                                        <field name="billing_type" column_invisible="1" />
+                                        <field name="purchase_order_id" optional="hide" />
+                                        <field name="purchase_order_state" optional="hide" />
+                                    </tree>
+                                </field>
+                            </group>
+                            <br />
+                            <group invisible="not own_third_freight">
+                                <field name="supplier_notes" widget="html"
+                                    placeholder="Enter your notes for suppliers here"
+                                    readonly="state == 'finalized'" />
+                            </group>
+                        </page>
+                        <page string="Fleets / Drivers">
+                            <group string="Fleets / Drivers">
+                                <field name="fleet_ids" nolabel="1" colspan="2">
+                                    <tree editable="bottom">
+                                        <field name="partner_id" />
+                                        <field name="fleet_vehicle_id"
+                                            domain="[('partner_id','=',partner_id),('is_motorized','=',True)]"
+                                            readonly="not partner_id" />
+                                        <field name="fleet_vehicle_trailer_id"
+                                            domain="[('partner_id','=',partner_id),('is_motorized','=',False)]"
+                                            readonly="not partner_id" />
+                                        <field name="driver_id"
+                                            domain="[('parent_id','=',partner_id)]"
+                                            readonly="not partner_id" />
+                                        <field name="note" />
+                                        <field name="service_id" column_invisible="1" />
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                        <page string="Attachments">
+                            <field name="attachment_ids" widget="many2many_binary" />
+                        </page>
+                    </notebook>
+
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" />
+                    <field name="activity_ids" widget="mail_activity" />
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_service_tms_filter" model="ir.ui.view">
+        <field name="name">service.tms.search</field>
+        <field name="model">service.tms</field>
+        <field eval="16" name="priority" />
+        <field name="arch" type="xml">
+            <search string="Search Services">
+                <field name="name" />
+                <separator />
+                <filter string="New" name="new_service" domain="[('state', '=', 'draft')]" />
+                <filter string="In Process" name="in_process_service"
+                    domain="[('state', '=', 'in_process')]" />
+                <filter string="Finalized" name="finalized_service"
+                    domain="[('state', '=', 'finalized')]" />
+                <separator />
+                <filter string="Own Services" name="own_services"
+                    domain="[('own_third_freight', '=', False)]" />
+                <filter string="Third Services" name="third_services"
+                    domain="[('own_third_freight', '=', True)]" />
+            </search>
+        </field>
+    </record>
+
+
+    <record id="action_services_tms" model="ir.actions.act_window">
+        <field name="name">Services</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">service.tms</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="view_id" ref="tms.service_tms_tree" />
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create first service!
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="tms_label_services" name="Services" parent="tms_root" />
+    <menuitem id="tms_action_services" name="List of Services" parent="tms_label_services"
+        action="action_services_tms" sequence="1" />
+
+</odoo>

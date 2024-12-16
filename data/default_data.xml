@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+    
+    <record id="tms_address_type_driver" model="tms.address.type">
+        <field name="name">Chofer</field>
+        <field name="code">chofer</field>
+    </record>
+
+
+    <!-- Default Load Type Records -->
+    <!-- <record id="load_type_granel" model="load.type.tms">
+        <field name="name">Granel</field>
+        <field name="code">GRN</field>
+    </record>
+
+    <record id="load_type_palletizada" model="load.type.tms">
+        <field name="name">Palletizada</field>
+        <field name="code">PLT</field>
+    </record>
+
+    <record id="load_type_suelta" model="load.type.tms">
+        <field name="name">Suelta</field>
+        <field name="code">SLT</field>
+    </record> -->
+
+    <!-- Default Unit Type Records -->
+    <record id="unit_type_semi_12" model="tms.unit.type">
+        <field name="name">Semi 12</field>
+        <field name="code">S12</field>
+    </record>
+
+    <record id="unit_type_semi_1350" model="tms.unit.type">
+        <field name="name">Semi 13,50</field>
+        <field name="code">S1350</field>
+    </record>
+
+    <record id="unit_type_semi_1450" model="tms.unit.type">
+        <field name="name">Semi 14,50</field>
+        <field name="code">S1450</field>
+    </record>
+
+    <record id="unit_type_semi_1550" model="tms.unit.type">
+        <field name="name">Semi 15,50</field>
+        <field name="code">S1550</field>
+    </record>
+
+    <record id="unit_type_batea" model="tms.unit.type">
+        <field name="name">Batea</field>
+        <field name="code">BAT</field>
+    </record>
+
+    <record id="unit_type_chasis_acoplado" model="tms.unit.type">
+        <field name="name">Chasis y Acoplado</field>
+        <field name="code">CYAC</field>
+    </record>
+
+    <record id="unit_type_chasis_balancin" model="tms.unit.type">
+        <field name="name">Chasis Balancin</field>
+        <field name="code">CBAL</field>
+    </record>
+
+    <record id="unit_type_sider" model="tms.unit.type">
+        <field name="name">Sider</field>
+        <field name="code">SID</field>
+    </record>
+
+    <record id="unit_type_truck" model="tms.unit.type">
+        <field name="name">Truck</field>
+        <field name="code">TRC</field>
+        <field name="is_motorized">True</field>
+    </record>
+
+</odoo>

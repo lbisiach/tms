@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_res_partner_form_transporter" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.transporter</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='category_id']" position="after">
+                <field name="customer_rank" invisible="True" />
+                <field name="supplier_rank" invisible="True" />
+                <field name="is_transporter" />
+                <field name="tms_address_type_ids"
+                    invisible="not is_transporter"
+                    widget="many2many_tags" options="{'no_create': True, 'no_quick_create': True}" />
+            </xpath>
+            <xpath expr="//page[@name='internal_notes']" position="after">
+                <page string="Fleet" id="fleet" invisible="not is_transporter">
+                    <field name="fleet_ids" context="{'default_partner_id': active_id}"
+                        readonly="False" domain="[('partner_id', '=', active_id)]">
+                        <tree string="Fleet Vehicles">
+                            <field name="license_plate" />
+                            <field name="unit_type_id" />
+                            <field name="is_motorized" />
+                        </tree>
+                    </field>
+                </page>
+                <page string="Drivers" id="drivers" invisible="not is_transporter">
+                    <field name="driver_ids" context="{'default_parent_id': active_id}" readonly="False">
+                        <tree string="Drivers">
+                            <field name="name" />
+                            <field name="tms_address_type_ids" widget="many2many_tags"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+            <xpath expr="/form//field[@name='child_ids']/form//field[@name='mobile']"
+                position="after">
+                <field name="tms_address_type_ids" widget="many2many_tags"
+                    options="{'no_create': True, 'no_quick_create': True}" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="res_partner_kanban_view" model="ir.ui.view">
+        <field name="name">res.partner.kanban.inherit.transporter</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.res_partner_kanban_view" />
+        <field name="arch" type="xml">
+            <field name="mobile" position="after">
+                <field name="tms_address_type_ids" widget="many2many_tags"
+                    options="{'no_create': True, 'no_quick_create': True}" />
+            </field>
+        </field>
+    </record>
+
+</odoo>

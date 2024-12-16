@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_service_tms,access.service.tms,model_service_tms,base.group_user,1,1,1,1
+access_service_tms_line,access.service.tms.line,model_service_tms_line,base.group_user,1,1,1,1
+access_service_tms_supplier_customer_line,access.service.tms.supplier.customer.line,model_service_tms_supplier_customer_line,base.group_user,1,1,1,1
+access_service_tms_fleet_line,access.service.tms.fleet.line,model_service_tms_fleet_line,base.group_user,1,1,1,1
+access_tms_address_type,access.tms.address.type,model_tms_address_type,base.group_user,1,1,1,1
+access_tms_unit_type,access.tms.unit.type,model_tms_unit_type,base.group_user,1,1,1,1

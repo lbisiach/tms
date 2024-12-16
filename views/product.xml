@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="view_product_template_form_inherit_tms" model="ir.ui.view">
+        <field name="name">product.template.form.inherit.tms</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <div name="options" position="inside">
+                <span class="d-inline-block">
+                    <field name="tms_product"/>
+                    <label for="tms_product"/>
+                </span>
+            </div>
+        </field>
+    </record>
+
+    <record id="product_template_search_view_inherit_tms" model="ir.ui.view">
+        <field name="name">product.template.search.view.inherit.tms</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_search_view"/>
+        <field name="arch" type="xml">
+            <filter name="filter_to_purchase" position="after">
+                <filter string="Product TMS" name="filter_tms" domain="[('tms_product', '=', True)]"/>
+            </filter>
+        </field>
+    </record>
+
+</odoo>
