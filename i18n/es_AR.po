@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 17.0+e-20241007\n"
+"Project-Id-Version: Odoo Server 17.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-14 20:22+0000\n"
-"PO-Revision-Date: 2024-12-14 20:22+0000\n"
+"POT-Creation-Date: 2024-12-26 21:46+0000\n"
+"PO-Revision-Date: 2024-12-26 21:46+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -18,30 +18,30 @@ msgstr ""
 #. module: tms
 #: model_terms:ir.ui.view,arch_db:tms.tms_services_form
 msgid "<span class=\"o_stat_text\">Compras</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">Compras</span>"
 
 #. module: tms
 #: model_terms:ir.ui.view,arch_db:tms.tms_services_form
 msgid "<span class=\"o_stat_text\">Facturas de Cliente</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">Facturas de Cliente</span>"
 
 #. module: tms
 #: model_terms:ir.ui.view,arch_db:tms.tms_services_form
 msgid "<span class=\"o_stat_text\">Facturas de Proveedor</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">Facturas de Proveedor</span>"
 
 #. module: tms
 #: model_terms:ir.ui.view,arch_db:tms.tms_services_form
 msgid "<span class=\"o_stat_text\">Ventas</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">Ventas</span>"
 
 #. module: tms
 #: model:ir.model.fields,field_description:tms.field_service_tms__message_needaction
 #: model:ir.model.fields,field_description:tms.field_service_tms_line__message_needaction
 #: model:ir.model.fields,field_description:tms.field_tms_address_type__message_needaction
 #: model:ir.model.fields,field_description:tms.field_tms_unit_type__message_needaction
-msgid "Acción Necesaria"
-msgstr ""
+msgid "Action Needed"
+msgstr "Acción Necesaria"
 
 #. module: tms
 #: model:ir.model.fields,field_description:tms.field_service_tms__activity_ids
@@ -57,7 +57,7 @@ msgstr "Actividades"
 #: model:ir.model.fields,field_description:tms.field_tms_address_type__activity_exception_decoration
 #: model:ir.model.fields,field_description:tms.field_tms_unit_type__activity_exception_decoration
 msgid "Activity Exception Decoration"
-msgstr ""
+msgstr "Decoración de Excepción de Actividad"
 
 #. module: tms
 #: model:ir.model.fields,field_description:tms.field_service_tms__activity_state
@@ -65,7 +65,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:tms.field_tms_address_type__activity_state
 #: model:ir.model.fields,field_description:tms.field_tms_unit_type__activity_state
 msgid "Activity State"
-msgstr ""
+msgstr "Estado de la Actividad"
 
 #. module: tms
 #: model:ir.model.fields,field_description:tms.field_service_tms__activity_type_icon
@@ -73,7 +73,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:tms.field_tms_address_type__activity_type_icon
 #: model:ir.model.fields,field_description:tms.field_tms_unit_type__activity_type_icon
 msgid "Activity Type Icon"
-msgstr ""
+msgstr "Ícono del Tipo de Actividad"
 
 #. module: tms
 #. odoo-python
@@ -89,7 +89,7 @@ msgstr "Tipo de Dirección"
 #: model:ir.model,name:tms.model_tms_address_type
 #, python-format
 msgid "Address Type in TMS"
-msgstr "Tipo de Dirección TMS"
+msgstr "Tipo de Dirección en TMS"
 
 #. module: tms
 #: model_terms:ir.ui.view,arch_db:tms.tms_address_type_form
@@ -103,17 +103,17 @@ msgstr "Tipo de Dirección de Contactos"
 #: model:ir.model.fields,field_description:tms.field_res_users__tms_address_type_ids
 #, python-format
 msgid "Address Types"
-msgstr "Tipos de Direcciones"
+msgstr "Tipos de Dirección"
 
 #. module: tms
 #: model:ir.ui.menu,name:tms.action_tms_address_type_id
 msgid "Address Types of Contacts"
-msgstr "Tipos de direcciones de contactos"
+msgstr "Tipos de Dirección de Contactos"
 
 #. module: tms
 #: model:ir.actions.act_window,name:tms.action_tms_address_type
 msgid "Address types of Contacts"
-msgstr "Tipos de direcciones de contactos"
+msgstr "Tipos de Dirección de Contactos"
 
 #. module: tms
 #. odoo-python
@@ -121,12 +121,7 @@ msgstr "Tipos de direcciones de contactos"
 #: model:ir.model.fields,field_description:tms.field_service_tms_supplier_customer_line__amount
 #, python-format
 msgid "Amount Total"
-msgstr "Monto total"
-
-#. module: tms
-#: model:ir.model,name:tms.model_ir_attachment
-msgid "Attachment"
-msgstr "Adjunto"
+msgstr "Monto Total"
 
 #. module: tms
 #: model:ir.model.fields,field_description:tms.field_service_tms__message_attachment_count
@@ -134,7 +129,7 @@ msgstr "Adjunto"
 #: model:ir.model.fields,field_description:tms.field_tms_address_type__message_attachment_count
 #: model:ir.model.fields,field_description:tms.field_tms_unit_type__message_attachment_count
 msgid "Attachment Count"
-msgstr "Cantidad de adjuntos"
+msgstr "Cantidad de Adjuntos"
 
 #. module: tms
 #. odoo-python
@@ -202,32 +197,32 @@ msgstr "Contactos"
 #. module: tms
 #: model_terms:ir.actions.act_window,help:tms.action_tms_address_type
 msgid "Create Address types"
-msgstr "Crear tipos de direcciones"
+msgstr "Crear Tipos de Dirección"
 
 #. module: tms
 #: model_terms:ir.ui.view,arch_db:tms.tms_services_form
 msgid "Create Purchases Orders"
-msgstr "Crear órdenes de compra"
+msgstr "Crear Órdenes de Compra"
 
 #. module: tms
 #: model_terms:ir.ui.view,arch_db:tms.tms_services_form
 msgid "Create Sales Orders"
-msgstr "Crear órdenes de venta"
+msgstr "Crear Órdenes de Venta"
 
 #. module: tms
 #: model_terms:ir.actions.act_window,help:tms.action_tms_unit_ype
 msgid "Create Unit Type"
-msgstr "Crear tipo de unidad"
+msgstr "Crear Tipo de Unidad"
 
 #. module: tms
 #: model_terms:ir.actions.act_window,help:tms.res_partner_action_transport_companies
 msgid "Create a new transport company in your address book"
-msgstr "Crear una nueva empresa de transporte en tu directorio"
+msgstr "Crear una nueva empresa de transporte en tu libreta de direcciones"
 
 #. module: tms
 #: model_terms:ir.actions.act_window,help:tms.action_services_tms
 msgid "Create first service!"
-msgstr "¡Crea tu primer servicio!"
+msgstr "¡Crea el primer servicio!"
 
 #. module: tms
 #: model:ir.model.fields,field_description:tms.field_service_tms__create_uid
@@ -273,7 +268,7 @@ msgstr "Cliente"
 #: model:ir.model.fields,field_description:tms.field_service_tms__customer_invoice_ids
 #, python-format
 msgid "Customer Invoices"
-msgstr "Facturas de cliente"
+msgstr "Facturas de Cliente"
 
 #. module: tms
 #. odoo-python
@@ -281,7 +276,7 @@ msgstr "Facturas de cliente"
 #: model:ir.model.fields,field_description:tms.field_service_tms__customer_notes
 #, python-format
 msgid "Customer Notes"
-msgstr "Notas del cliente"
+msgstr "Notas del Cliente"
 
 #. module: tms
 #: model:ir.ui.menu,name:tms.menu_account_customer
@@ -295,7 +290,7 @@ msgstr "Clientes"
 #: model:ir.model.fields,field_description:tms.field_service_tms_line__date_end
 #, python-format
 msgid "Date End"
-msgstr "Fecha de fin"
+msgstr "Fecha de Fin"
 
 #. module: tms
 #. odoo-python
@@ -304,7 +299,7 @@ msgstr "Fecha de fin"
 #: model:ir.model.fields,field_description:tms.field_service_tms_line__date_start
 #, python-format
 msgid "Date Start"
-msgstr "Fecha de inicio"
+msgstr "Fecha de Inicio"
 
 #. module: tms
 #: model_terms:ir.ui.view,arch_db:tms.tms_services_form
@@ -327,7 +322,7 @@ msgstr "Descuento"
 #: model:ir.model.fields,field_description:tms.field_tms_address_type__display_name
 #: model:ir.model.fields,field_description:tms.field_tms_unit_type__display_name
 msgid "Display Name"
-msgstr "Nombre para mostrar"
+msgstr "Nombre para Mostrar"
 
 #. module: tms
 #. odoo-python
@@ -344,7 +339,7 @@ msgstr "Distancia"
 #: model:ir.model.fields,field_description:tms.field_service_tms__distance_empty
 #, python-format
 msgid "Distance Empty"
-msgstr "Distancia vacía"
+msgstr "Distancia Vacía"
 
 #. module: tms
 #. odoo-python
@@ -352,7 +347,7 @@ msgstr "Distancia vacía"
 #: model:ir.model.fields,field_description:tms.field_service_tms__distance_uploaded
 #, python-format
 msgid "Distance Uploaded"
-msgstr "Distancia cargada"
+msgstr "Distancia Cargada"
 
 #. module: tms
 #: model_terms:ir.ui.view,arch_db:tms.tms_services_form
@@ -384,7 +379,7 @@ msgstr "Conductores"
 #: model:ir.model.fields,help:tms.field_res_users__driver_ids
 #, python-format
 msgid "Drivers associated with this partner"
-msgstr "Conductores asociados a este socio"
+msgstr "Conductores asociados con este socio"
 
 #. module: tms
 #. odoo-python
@@ -392,27 +387,30 @@ msgstr "Conductores asociados a este socio"
 #: model:ir.model.fields,field_description:tms.field_service_tms_line__place_end
 #, python-format
 msgid "End Place"
-msgstr "Lugar de destino"
+msgstr "Lugar de Finalización"
 
 #. module: tms
 #: model_terms:ir.ui.view,arch_db:tms.tms_services_form
 msgid "Enter your notes for customers here"
-msgstr "Escribe aquí tus notas para los clientes"
+msgstr "Ingrese sus notas para los clientes aquí"
 
 #. module: tms
 #: model_terms:ir.ui.view,arch_db:tms.tms_services_form
 msgid "Enter your notes for suppliers here"
-msgstr "Escribe aquí tus notas para los proveedores"
+msgstr "Ingrese sus notas para los proveedores aquí"
 
 #. module: tms
 #: model_terms:ir.ui.view,arch_db:tms.tms_services_form
 msgid "Enter your notes here"
-msgstr "Escribe tus notas aquí"
+msgstr "Ingrese sus notas aquí"
 
 #. module: tms
+#. odoo-python
+#: code:addons/tms/models/services.py:0
 #: model:ir.model.fields.selection,name:tms.selection__service_tms__state__finalized
 #: model_terms:ir.ui.view,arch_db:tms.tms_services_form
 #: model_terms:ir.ui.view,arch_db:tms.view_service_tms_filter
+#, python-format
 msgid "Finalized"
 msgstr "Finalizado"
 
@@ -436,10 +434,12 @@ msgstr "Flota"
 #: model:ir.model.fields,field_description:tms.field_service_tms_fleet_line__fleet_vehicle_trailer_id
 #, python-format
 msgid "Fleet Vehicle"
-msgstr "Vehículo de la flota"#. module: tms
+msgstr "Vehículo de Flota"
+
+#. module: tms
 #: model_terms:ir.ui.view,arch_db:tms.view_res_partner_form_transporter
 msgid "Fleet Vehicles"
-msgstr "Vehículos de la flota"
+msgstr "Vehículos de Flota"
 
 #. module: tms
 #. odoo-python
@@ -447,7 +447,7 @@ msgstr "Vehículos de la flota"
 #: model:ir.model,name:tms.model_service_tms_fleet_line
 #, python-format
 msgid "Fleet of Services of Transport Manager System"
-msgstr "Flota de servicios del Sistema de Gestión de Transporte"
+msgstr "Flota de Servicios del Sistema de Gestión de Transporte"
 
 #. module: tms
 #: model_terms:ir.ui.view,arch_db:tms.tms_services_form
@@ -476,7 +476,7 @@ msgstr "Seguidores (Socios)"
 #: model:ir.model.fields,help:tms.field_tms_address_type__activity_type_icon
 #: model:ir.model.fields,help:tms.field_tms_unit_type__activity_type_icon
 msgid "Font awesome icon e.g. fa-tasks"
-msgstr "Ícono de Font Awesome, por ejemplo: fa-tasks"
+msgstr "Icono de Font Awesome, por ejemplo, fa-tasks"
 
 #. module: tms
 #: model:ir.model.fields,field_description:tms.field_service_tms__has_message
@@ -484,7 +484,7 @@ msgstr "Ícono de Font Awesome, por ejemplo: fa-tasks"
 #: model:ir.model.fields,field_description:tms.field_tms_address_type__has_message
 #: model:ir.model.fields,field_description:tms.field_tms_unit_type__has_message
 msgid "Has Message"
-msgstr "Tiene mensaje"
+msgstr "Tiene Mensaje"
 
 #. module: tms
 #. odoo-python
@@ -492,7 +492,7 @@ msgstr "Tiene mensaje"
 #: model:ir.model.fields,field_description:tms.field_service_tms_line__hour_end
 #, python-format
 msgid "Hour End"
-msgstr "Hora de fin"
+msgstr "Hora de Finalización"
 
 #. module: tms
 #. odoo-python
@@ -500,7 +500,7 @@ msgstr "Hora de fin"
 #: model:ir.model.fields,field_description:tms.field_service_tms_line__hour_start
 #, python-format
 msgid "Hour Start"
-msgstr "Hora de inicio"
+msgstr "Hora de Inicio"
 
 #. module: tms
 #: model:ir.model.fields,field_description:tms.field_service_tms__id
@@ -526,7 +526,7 @@ msgstr "Ícono"
 #: model:ir.model.fields,help:tms.field_tms_address_type__activity_exception_icon
 #: model:ir.model.fields,help:tms.field_tms_unit_type__activity_exception_icon
 msgid "Icon to indicate an exception activity."
-msgstr "Ícono para indicar una actividad de excepción."
+msgstr "Ícono para indicar una actividad excepcional."
 
 #. module: tms
 #: model:ir.model.fields,help:tms.field_service_tms__message_needaction
@@ -534,7 +534,7 @@ msgstr "Ícono para indicar una actividad de excepción."
 #: model:ir.model.fields,help:tms.field_tms_address_type__message_needaction
 #: model:ir.model.fields,help:tms.field_tms_unit_type__message_needaction
 msgid "If checked, new messages require your attention."
-msgstr "Si está marcado, los nuevos mensajes requieren su atención."
+msgstr "Si está marcado, los mensajes nuevos requieren su atención."
 
 #. module: tms
 #: model:ir.model.fields,help:tms.field_service_tms__message_has_error
@@ -549,21 +549,33 @@ msgid "If checked, some messages have a delivery error."
 msgstr "Si está marcado, algunos mensajes tienen un error de entrega."
 
 #. module: tms
+#. odoo-python
+#: code:addons/tms/models/services.py:0
 #: model:ir.model.fields.selection,name:tms.selection__service_tms__state__in_process
 #: model_terms:ir.ui.view,arch_db:tms.tms_services_form
 #: model_terms:ir.ui.view,arch_db:tms.view_service_tms_filter
+#, python-format
 msgid "In Process"
-msgstr "En proceso"
+msgstr "En Proceso"
 
 #. module: tms
 #: model:ir.model.fields,field_description:tms.field_service_tms__invoice_purchase_count
 msgid "Invoice Purchase Count"
-msgstr "Número de facturas de compra"
+msgstr "Cantidad de Compras Facturadas"
 
 #. module: tms
 #: model:ir.model.fields,field_description:tms.field_service_tms__invoice_sale_count
 msgid "Invoice Sale Count"
-msgstr "Número de facturas de venta"
+msgstr "Cantidad de Ventas Facturadas"
+
+#. module: tms
+#. odoo-python
+#: code:addons/tms/models/services.py:0
+#: model:ir.model.fields.selection,name:tms.selection__service_tms__state__invoiced
+#: model_terms:ir.ui.view,arch_db:tms.tms_services_form
+#, python-format
+msgid "Invoiced"
+msgstr "Facturado"
 
 #. module: tms
 #. odoo-python
@@ -572,7 +584,7 @@ msgstr "Número de facturas de venta"
 #: model:ir.model.fields,field_description:tms.field_service_tms_supplier_customer_line__billing_type
 #, python-format
 msgid "Invoicing Method"
-msgstr "Método de facturación"
+msgstr "Método de Facturación"
 
 #. module: tms
 #: model:ir.model.fields,field_description:tms.field_service_tms__message_is_follower
@@ -580,7 +592,7 @@ msgstr "Método de facturación"
 #: model:ir.model.fields,field_description:tms.field_tms_address_type__message_is_follower
 #: model:ir.model.fields,field_description:tms.field_tms_unit_type__message_is_follower
 msgid "Is Follower"
-msgstr "Es seguidor"
+msgstr "Es Seguidor"
 
 #. module: tms
 #. odoo-python
@@ -590,7 +602,7 @@ msgstr "Es seguidor"
 #: model:ir.model.fields,field_description:tms.field_tms_unit_type__is_motorized
 #, python-format
 msgid "Is Motorized"
-msgstr "Es motorizado"
+msgstr "Es Motorizado"
 
 #. module: tms
 #. odoo-python
@@ -601,7 +613,7 @@ msgstr "Es motorizado"
 #: model:ir.model.fields,field_description:tms.field_res_users__is_transporter
 #, python-format
 msgid "Is a Transporter"
-msgstr "Es un transportista"
+msgstr "Es un Transportista"
 
 #. module: tms
 #: model:ir.model,name:tms.model_account_move
@@ -621,7 +633,7 @@ msgstr "KM"
 #: model:ir.model.fields,field_description:tms.field_tms_address_type__write_uid
 #: model:ir.model.fields,field_description:tms.field_tms_unit_type__write_uid
 msgid "Last Updated by"
-msgstr "Última actualización por"
+msgstr "Última Actualización por"
 
 #. module: tms
 #: model:ir.model.fields,field_description:tms.field_service_tms__write_date
@@ -631,13 +643,13 @@ msgstr "Última actualización por"
 #: model:ir.model.fields,field_description:tms.field_tms_address_type__write_date
 #: model:ir.model.fields,field_description:tms.field_tms_unit_type__write_date
 msgid "Last Updated on"
-msgstr "Última actualización el"
+msgstr "Última Actualización el"
 
 #. module: tms
 #: model_terms:ir.actions.act_window,help:tms.outsourced_fleet_vehicle_action
 #: model_terms:ir.actions.act_window,help:tms.own_fleet_vehicle_action
 msgid "Let's create your first vehicle."
-msgstr "Vamos a crear tu primer vehículo."
+msgstr "Creemos tu primer vehículo."
 
 #. module: tms
 #. odoo-python
@@ -645,17 +657,17 @@ msgstr "Vamos a crear tu primer vehículo."
 #: model:ir.model,name:tms.model_service_tms_line
 #, python-format
 msgid "Lines of Services of Transport Manager System"
-msgstr "Líneas de servicios del Sistema de Gestión de Transporte"
+msgstr "Líneas de Servicios del Sistema de Gestión de Transporte"
 
 #. module: tms
 #: model_terms:ir.ui.view,arch_db:tms.tms_address_type_form
 msgid "List of Address types of Contacts"
-msgstr "Lista de tipos de dirección de los contactos"
+msgstr "Lista de Tipos de Dirección de Contactos"
 
 #. module: tms
 #: model_terms:ir.ui.view,arch_db:tms.tms_address_type_tree
 msgid "List of Load types"
-msgstr "Lista de tipos de carga"
+msgstr "Lista de Tipos de Carga"
 
 #. module: tms
 #: model:ir.ui.menu,name:tms.tms_action_services
@@ -666,7 +678,7 @@ msgstr "Lista de Servicios"
 #: model_terms:ir.ui.view,arch_db:tms.tms_unit_ype_form
 #: model_terms:ir.ui.view,arch_db:tms.tms_unit_ype_tree
 msgid "List of Unit types"
-msgstr "Lista de tipos de unidades"
+msgstr "Lista de Tipos de Unidad"
 
 #. module: tms
 #. odoo-python
@@ -682,7 +694,7 @@ msgstr "Material/Referencia"
 #: model:ir.model.fields,field_description:tms.field_tms_address_type__message_has_error
 #: model:ir.model.fields,field_description:tms.field_tms_unit_type__message_has_error
 msgid "Message Delivery error"
-msgstr "Error en la entrega del mensaje"
+msgstr "Error en la Entrega del Mensaje"
 
 #. module: tms
 #: model:ir.model.fields,field_description:tms.field_service_tms__message_ids
@@ -698,12 +710,12 @@ msgstr "Mensajes"
 #: model:ir.model.fields,field_description:tms.field_tms_address_type__my_activity_date_deadline
 #: model:ir.model.fields,field_description:tms.field_tms_unit_type__my_activity_date_deadline
 msgid "My Activity Deadline"
-msgstr "Mi fecha límite de actividad"
+msgstr "Fecha límite de mi actividad"
 
 #. module: tms
 #. odoo-python
 #: code:addons/tms/models/services.py:0 code:addons/tms/models/services.py:0
-#: code:addons/tms/models/services.py:0
+#: code:addons/tms/models/services.py:0 code:addons/tms/models/services.py:0
 #: model:ir.model.fields.selection,name:tms.selection__service_tms__state__draft
 #: model_terms:ir.ui.view,arch_db:tms.view_service_tms_filter
 #, python-format
@@ -716,7 +728,7 @@ msgstr "Nuevo"
 #: model:ir.model.fields,field_description:tms.field_tms_address_type__activity_calendar_event_id
 #: model:ir.model.fields,field_description:tms.field_tms_unit_type__activity_calendar_event_id
 msgid "Next Activity Calendar Event"
-msgstr "Próximo evento del calendario de actividades"
+msgstr "Próximo evento del calendario de actividad"
 
 #. module: tms
 #: model:ir.model.fields,field_description:tms.field_service_tms__activity_date_deadline
@@ -724,7 +736,7 @@ msgstr "Próximo evento del calendario de actividades"
 #: model:ir.model.fields,field_description:tms.field_tms_address_type__activity_date_deadline
 #: model:ir.model.fields,field_description:tms.field_tms_unit_type__activity_date_deadline
 msgid "Next Activity Deadline"
-msgstr "Próxima fecha límite de actividad"
+msgstr "Fecha límite de la próxima actividad"
 
 #. module: tms
 #: model:ir.model.fields,field_description:tms.field_service_tms__activity_summary
@@ -818,12 +830,12 @@ msgstr "Número de mensajes con error de entrega"
 #: model:ir.model.fields,field_description:tms.field_service_tms__name
 #, python-format
 msgid "N° of Service"
-msgstr "N° de servicio"
+msgstr "N.º de servicio"
 
 #. module: tms
 #: model_terms:ir.actions.act_window,help:tms.res_partner_action_transport_companies
 msgid "Odoo helps you easily track all activities related to a supplier."
-msgstr "Odoo te ayuda a seguir fácilmente todas las actividades relacionadas con un proveedor."
+msgstr "Odoo te ayuda a rastrear fácilmente todas las actividades relacionadas con un proveedor."
 
 #. module: tms
 #: model:ir.actions.act_window,name:tms.outsourced_fleet_vehicle_action
@@ -928,7 +940,7 @@ msgstr "Órdenes de compra"
 #. module: tms
 #: model_terms:ir.ui.view,arch_db:tms.tms_services_form
 msgid "QTY / KM"
-msgstr "Cant. / KM"
+msgstr "Cantidad / KM"
 
 #. module: tms
 #. odoo-python
@@ -944,7 +956,7 @@ msgstr "Cantidad"
 #: model:ir.model.fields,field_description:tms.field_tms_address_type__rating_ids
 #: model:ir.model.fields,field_description:tms.field_tms_unit_type__rating_ids
 msgid "Ratings"
-msgstr "Calificaciones"
+msgstr "Valoraciones"
 
 #. module: tms
 #: model:ir.model.fields,field_description:tms.field_service_tms__activity_user_id
@@ -981,12 +993,12 @@ msgstr "Venta / Compra"
 #: model:ir.model.fields,field_description:tms.field_service_tms_supplier_customer_line__sale_order_id
 #, python-format
 msgid "Sale Order"
-msgstr "Pedido de Venta"
+msgstr "Orden de venta"
 
 #. module: tms
 #: model:ir.model.fields,field_description:tms.field_service_tms__sale_order_count
 msgid "Sale Order Count"
-msgstr "Cantidad de Pedidos de Venta"
+msgstr "Cantidad de órdenes de venta"
 
 #. module: tms
 #. odoo-python
@@ -994,7 +1006,7 @@ msgstr "Cantidad de Pedidos de Venta"
 #: model:ir.model.fields,field_description:tms.field_service_tms_supplier_customer_line__sale_order_line_id
 #, python-format
 msgid "Sale Order Line"
-msgstr "Línea de Pedido de Venta"
+msgstr "Línea de orden de venta"
 
 #. module: tms
 #. odoo-python
@@ -1002,7 +1014,7 @@ msgstr "Línea de Pedido de Venta"
 #: model:ir.model.fields,field_description:tms.field_service_tms_supplier_customer_line__sale_order_state
 #, python-format
 msgid "Sale Order State"
-msgstr "Estado del Pedido de Venta"
+msgstr "Estado de la orden de venta"
 
 #. module: tms
 #. odoo-python
@@ -1010,22 +1022,22 @@ msgstr "Estado del Pedido de Venta"
 #: model:ir.model.fields,field_description:tms.field_service_tms__sale_order_ids
 #, python-format
 msgid "Sale Orders"
-msgstr "Pedidos de Venta"
+msgstr "Órdenes de venta"
 
 #. module: tms
 #: model:ir.model,name:tms.model_sale_advance_payment_inv
 msgid "Sales Advance Payment Invoice"
-msgstr "Factura de Anticipo de Venta"
+msgstr "Factura de anticipo de ventas"
 
 #. module: tms
 #: model:ir.model,name:tms.model_sale_order
 msgid "Sales Order"
-msgstr "Pedido de Venta"
+msgstr "Orden de venta"
 
 #. module: tms
 #: model_terms:ir.ui.view,arch_db:tms.view_service_tms_filter
 msgid "Search Services"
-msgstr "Buscar Servicios"
+msgstr "Buscar servicios"
 
 #. module: tms
 #. odoo-python
@@ -1046,7 +1058,7 @@ msgstr "Servicio"
 #: model:ir.model.fields,field_description:tms.field_service_tms__service_line_ids
 #, python-format
 msgid "Service Lines"
-msgstr "Líneas de Servicio"
+msgstr "Líneas de servicio"
 
 #. module: tms
 #: model_terms:ir.ui.view,arch_db:tms.tms_services_form
@@ -1071,7 +1083,7 @@ msgstr "Servicios del Sistema de Gestión de Transporte"
 #. module: tms
 #: model:ir.ui.menu,name:tms.tms_menu_config
 msgid "Settings"
-msgstr "Configuración"
+msgstr "Configuraciones"
 
 #. module: tms
 #. odoo-python
@@ -1079,7 +1091,7 @@ msgstr "Configuración"
 #: model:ir.model.fields,field_description:tms.field_service_tms__show_hour
 #, python-format
 msgid "Show Hour"
-msgstr "Mostrar Hora"
+msgstr "Mostrar hora"
 
 #. module: tms
 #. odoo-python
@@ -1087,7 +1099,7 @@ msgstr "Mostrar Hora"
 #: model:ir.model.fields,field_description:tms.field_service_tms__hide_purchase_order
 #, python-format
 msgid "Show Purchase Order"
-msgstr "Mostrar Pedido de Compra"
+msgstr "Mostrar orden de compra"
 
 #. module: tms
 #. odoo-python
@@ -1095,7 +1107,7 @@ msgstr "Mostrar Pedido de Compra"
 #: model:ir.model.fields,field_description:tms.field_service_tms__hide_sale_order
 #, python-format
 msgid "Show Sale Order"
-msgstr "Mostrar Pedido de Venta"
+msgstr "Mostrar orden de venta"
 
 #. module: tms
 #. odoo-python
@@ -1103,7 +1115,7 @@ msgstr "Mostrar Pedido de Venta"
 #: model:ir.model.fields,field_description:tms.field_service_tms_line__place_start
 #, python-format
 msgid "Start Place"
-msgstr "Lugar de Inicio"
+msgstr "Lugar de inicio"
 
 #. module: tms
 #. odoo-python
@@ -1124,9 +1136,9 @@ msgid ""
 "Today: Activity date is today\n"
 "Planned: Future activities."
 msgstr ""
-"Estatus basado en actividades\n"
+"Estado basado en las actividades\n"
 "Vencido: La fecha de vencimiento ya ha pasado\n"
-"Hoy: La fecha de actividad es hoy\n"
+"Hoy: La fecha de la actividad es hoy\n"
 "Planificado: Actividades futuras."
 
 #. module: tms
@@ -1145,7 +1157,7 @@ msgstr "Proveedor"
 #: model:ir.model.fields,field_description:tms.field_service_tms__supplier_invoice_ids
 #, python-format
 msgid "Supplier Invoices"
-msgstr "Facturas de Proveedor"
+msgstr "Facturas de proveedor"
 
 #. module: tms
 #. odoo-python
@@ -1153,7 +1165,7 @@ msgstr "Facturas de Proveedor"
 #: model:ir.model.fields,field_description:tms.field_service_tms__supplier_notes
 #, python-format
 msgid "Supplier Notes"
-msgstr "Notas de Proveedor"
+msgstr "Notas de proveedor"
 
 #. module: tms
 #. odoo-python
@@ -1161,7 +1173,12 @@ msgstr "Notas de Proveedor"
 #: model:ir.model,name:tms.model_service_tms_supplier_customer_line
 #, python-format
 msgid "Supplier of Services of Transport Manager System"
-msgstr "Proveedor de Servicios del Sistema de Gestión de Transporte"
+msgstr "Proveedor de servicios del Sistema de Gestión de Transporte"
+
+#. module: tms
+#: model:ir.ui.menu,name:tms.tms_root
+msgid "TMS"
+msgstr "TMS"
 
 #. module: tms
 #. odoo-python
@@ -1198,12 +1215,12 @@ msgstr "El nombre del servicio debe ser único."
 #: model:ir.model.fields,field_description:tms.field_service_tms__own_third_freight
 #, python-format
 msgid "Third Freight"
-msgstr "Flete Tercerizado"
+msgstr "Flete tercero"
 
 #. module: tms
 #: model_terms:ir.ui.view,arch_db:tms.view_service_tms_filter
 msgid "Third Services"
-msgstr "Servicios Tercerizados"
+msgstr "Servicios terceros"
 
 #. module: tms
 #. odoo-python
@@ -1211,7 +1228,7 @@ msgstr "Servicios Tercerizados"
 #: model:ir.model.fields,field_description:tms.field_service_tms__tn_depletion
 #, python-format
 msgid "Tn Depletion"
-msgstr "Tn Merma"
+msgstr "Agotamiento de Tn"
 
 #. module: tms
 #. odoo-python
@@ -1219,7 +1236,7 @@ msgstr "Tn Merma"
 #: model:ir.model.fields,field_description:tms.field_service_tms__tn_downloaded
 #, python-format
 msgid "Tn Downloaded"
-msgstr "Tn Descargado"
+msgstr "Tn descargado"
 
 #. module: tms
 #. odoo-python
@@ -1227,7 +1244,7 @@ msgstr "Tn Descargado"
 #: model:ir.model.fields,field_description:tms.field_service_tms__tn_gauging
 #, python-format
 msgid "Tn Gauging"
-msgstr "Tn Aforo"
+msgstr "Medición de Tn"
 
 #. module: tms
 #. odoo-python
@@ -1253,12 +1270,7 @@ msgstr "Total"
 #. module: tms
 #: model:ir.ui.menu,name:tms.menu_account_supplier
 msgid "Transport Companies"
-msgstr "Empresas de Transporte"
-
-#. module: tms
-#: model:ir.ui.menu,name:tms.tms_root
-msgid "Transport Management"
-msgstr "Gestión de Transporte"
+msgstr "Empresas de transporte"
 
 #. module: tms
 #. odoo-python
@@ -1266,7 +1278,7 @@ msgstr "Gestión de Transporte"
 #: model:ir.model.fields,field_description:tms.field_service_tms_supplier_customer_line__operation_type
 #, python-format
 msgid "Type of Operation"
-msgstr "Tipo de Operación"
+msgstr "Tipo de operación"
 
 #. module: tms
 #: model:ir.model.fields,help:tms.field_service_tms__activity_exception_decoration
@@ -1274,7 +1286,7 @@ msgstr "Tipo de Operación"
 #: model:ir.model.fields,help:tms.field_tms_address_type__activity_exception_decoration
 #: model:ir.model.fields,help:tms.field_tms_unit_type__activity_exception_decoration
 msgid "Type of the exception activity on record."
-msgstr "Tipo de actividad de excepción registrada."
+msgstr "Tipo de la actividad de excepción registrada."
 
 #. module: tms
 #. odoo-python
@@ -1282,7 +1294,7 @@ msgstr "Tipo de actividad de excepción registrada."
 #: model:ir.model.fields,field_description:tms.field_service_tms_line__url_place_end
 #, python-format
 msgid "URL End Place"
-msgstr "URL Lugar de Fin"
+msgstr "URL Lugar de destino"
 
 #. module: tms
 #. odoo-python
@@ -1290,7 +1302,7 @@ msgstr "URL Lugar de Fin"
 #: model:ir.model.fields,field_description:tms.field_service_tms_line__url_place_start
 #, python-format
 msgid "URL Start Place"
-msgstr "URL Lugar de Inicio"
+msgstr "URL Lugar de inicio"
 
 #. module: tms
 #. odoo-python
@@ -1301,18 +1313,18 @@ msgstr "URL Lugar de Inicio"
 #: model_terms:ir.ui.view,arch_db:tms.tms_unit_ype_form
 #, python-format
 msgid "Unit Type"
-msgstr "Tipo de Unidad"
+msgstr "Tipo de unidad"
 
 #. module: tms
 #: model:ir.model,name:tms.model_tms_unit_type
 msgid "Unit Type in TMS"
-msgstr "Tipo de Unidad en TMS"
+msgstr "Tipo de unidad en TMS"
 
 #. module: tms
 #: model:ir.actions.act_window,name:tms.action_tms_unit_ype
 #: model:ir.ui.menu,name:tms.tms_action_tms_unit_ype
 msgid "Unit Types"
-msgstr "Tipos de Unidades"
+msgstr "Tipos de unidades"
 
 #. module: tms
 #. odoo-python
@@ -1347,7 +1359,7 @@ msgstr "Proveedores"
 #: model:ir.model.fields,field_description:tms.field_tms_address_type__website_message_ids
 #: model:ir.model.fields,field_description:tms.field_tms_unit_type__website_message_ids
 msgid "Website Messages"
-msgstr "Mensajes del Sitio Web"
+msgstr "Mensajes del sitio web"
 
 #. module: tms
 #: model:ir.model.fields,help:tms.field_service_tms__website_message_ids
@@ -1355,25 +1367,25 @@ msgstr "Mensajes del Sitio Web"
 #: model:ir.model.fields,help:tms.field_tms_address_type__website_message_ids
 #: model:ir.model.fields,help:tms.field_tms_unit_type__website_message_ids
 msgid "Website communication history"
-msgstr "Historial de comunicación del sitio web"
+msgstr "Historial de comunicaciones del sitio web"
 
 #. module: tms
 #. odoo-python
 #: code:addons/tms/models/tms_address_type.py:0
 #, python-format
 msgid "You cannot delete a record where the code is 'chofer'."
-msgstr "No se puede eliminar un registro donde el código sea 'chofer'."
+msgstr "No puedes eliminar un registro donde el código sea 'chofer'."
 
 #. module: tms
 #. odoo-python
 #: code:addons/tms/models/services.py:0
 #, python-format
 msgid "You must add at least one customer line."
-msgstr "Debe agregar al menos una línea de cliente."
+msgstr "Debes añadir al menos una línea de cliente."
 
 #. module: tms
 #. odoo-python
 #: code:addons/tms/models/services.py:0
 #, python-format
 msgid "You must add at least one supplier line."
-msgstr "Debe agregar al menos una línea de proveedor."
+msgstr "Debes añadir al menos una línea de proveedor."
