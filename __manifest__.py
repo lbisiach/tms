@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Transport Management',
-    'version': '17.0.1.0.2',
+    'version': '17.0.1.0.3',
     'summary': """Module for managing transportation services""",
     'description': 'Module that allows you to manage documents, purchases and sales of services performed.',
     "category": "Services",

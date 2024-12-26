@@ -15,8 +15,8 @@ class ServiceTms(models.Model):
 
     name = fields.Char(string=_("N° of Service"), copy=False, readonly=True, tracking=True) 
     label_service = fields.Char(string=_("Material/Reference"), required=True, tracking=True)
-    date_start = fields.Datetime(string=_("Date Start"), default=fields.Datetime.now, required=True, tracking=True)
-    date_stop = fields.Datetime(string=_("Date End"), default=fields.Datetime.now, required=True, tracking=True)
+    date_start = fields.Date(string=_("Date Start"), default=fields.Datetime.now, required=True, tracking=True)
+    date_stop = fields.Date(string=_("Date End"), default=fields.Datetime.now, required=True, tracking=True)
     state = fields.Selection([
         ('draft',_('New')),
         ('in_process',_('In Process')),
