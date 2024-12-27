@@ -87,10 +87,8 @@
                     </div>
                     <group>
                         <group>
-                            <field name="create_date" readonly="True" />
                             <field name="label_service" readonly="state == 'finalized'" />
                             <field name="own_third_freight" readonly="state == 'finalized'" />
-                            
                         </group>
                         <group>
                             <field name="notes" widget="html"

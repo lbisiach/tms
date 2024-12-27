@@ -18,4 +18,4 @@ class FleetVehicle(models.Model):
     @api.depends('license_plate')
     def _compute_vehicle_name(self):
         for record in self:
-            record.name = ((record.license_plate + ' - ' +  record.unit_type_id.name) or _('No Plate'))
+            record.name = ((record.license_plate) or _('No Plate'))
