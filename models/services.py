@@ -14,9 +14,10 @@ class ServiceTms(models.Model):
     _inherit = ['mail.thread', 'mail.activity.mixin']
 
     name = fields.Char(string=_("N° of Service"), copy=False, readonly=True, tracking=True) 
-    label_service = fields.Char(string=_("Material/Reference"), required=True, tracking=True)
-    date_start = fields.Date(string=_("Date Start"), default=fields.Datetime.now, required=True, tracking=True)
-    date_stop = fields.Date(string=_("Date End"), default=fields.Datetime.now, required=True, tracking=True)
+    label_service = fields.Char(string=_("Reference"), required=True, tracking=True)
+    material = fields.Char(string=_("Material"), tracking=True)
+    date_start = fields.Date(string=_("Date Start"), default=fields.Datetime.now, required=True, tracking=True, store=True, compute="_compute_date_start_date_stop")
+    date_stop = fields.Date(string=_("Date End"), default=fields.Datetime.now, required=True, tracking=True, store=True, compute="_compute_date_start_date_stop")
     state = fields.Selection([
         ('draft',_('New')),
         ('in_process',_('In Process')),
@@ -54,7 +55,12 @@ class ServiceTms(models.Model):
     purchase_order_count = fields.Integer(string="Purchase Order Count", compute="_compute_purchase_order_count")
     customer_invoice_ids = fields.One2many('account.move', 'service_id', string=_("Customer Invoices"))
     supplier_invoice_ids = fields.One2many('account.move', 'service_id', string=_("Supplier Invoices"))
-
+    fleet_ids = fields.One2many('service.tms.fleet.line', 'service_id', string=_("Fleet"), tracking=True) 
+    driver_tree_ids = fields.Many2many('res.partner', 'service_tms_driver_rel', 'service_id', 'partner_id', string=_("Driver"), readonly=True, store=True, compute="_compute_driver_tree_ids") 
+    fleet_tree_ids = fields.Many2many('fleet.vehicle', 'service_tms_fleet_rel', 'service_id', 'vehicle_id', string=_("Fleet"), readonly=True, store=True, compute="_compute_driver_tree_ids") 
+    customer_tree_ids = fields.Many2many('res.partner', 'service_tms_customer_rel', 'service_id', 'partner_id', string=_("Customer"), readonly=True, store=True, compute="_compute_customer_tree_ids") 
+    supplier_tree_ids = fields.Many2many('res.partner', 'service_tms_supplier_rel', 'service_id', 'partner_id', string=_("Supplier"), readonly=True, store=True, compute="_compute_supplier_tree_ids")
+    
     _sql_constraints = [
         ('unique_service_name', 'UNIQUE(name)', 'The service name must be unique.')
     ]
@@ -70,6 +76,29 @@ class ServiceTms(models.Model):
 
     def button_invoiced(self):
         self.state = 'invoiced'
+
+    @api.depends('service_line_ids')
+    def _compute_date_start_date_stop(self):
+        for record in self:
+            if record.service_line_ids:
+                record.date_start = record.service_line_ids[0].date_start
+                record.date_stop = record.service_line_ids[-1].date_end
+
+    @api.depends('fleet_ids')
+    def _compute_driver_tree_ids(self):
+        for rec in self:
+            rec.driver_tree_ids = rec.fleet_ids.mapped('driver_id')
+            rec.fleet_tree_ids = rec.fleet_ids.mapped('fleet_vehicle_id')
+
+    @api.depends('customer_ids')
+    def _compute_customer_tree_ids(self):
+        for rec in self:
+            rec.customer_tree_ids = rec.customer_ids.mapped('customer_id')
+
+    @api.depends('supplier_ids')
+    def _compute_supplier_tree_ids(self):
+        for rec in self:
+            rec.supplier_tree_ids = rec.supplier_ids.mapped('supplier_id')
 
     def _compute_invoice_sale_count(self):
         for record in self:

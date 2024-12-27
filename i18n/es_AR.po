@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 17.0+e\n"
+"Project-Id-Version: Odoo Server 17.0+e-20241209\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-26 21:46+0000\n"
-"PO-Revision-Date: 2024-12-26 21:46+0000\n"
+"POT-Creation-Date: 2024-12-27 21:32+0000\n"
+"PO-Revision-Date: 2024-12-27 21:32+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -18,22 +18,22 @@ msgstr ""
 #. module: tms
 #: model_terms:ir.ui.view,arch_db:tms.tms_services_form
 msgid "<span class=\"o_stat_text\">Compras</span>"
-msgstr "<span class=\"o_stat_text\">Compras</span>"
+msgstr ""
 
 #. module: tms
 #: model_terms:ir.ui.view,arch_db:tms.tms_services_form
 msgid "<span class=\"o_stat_text\">Facturas de Cliente</span>"
-msgstr "<span class=\"o_stat_text\">Facturas de Cliente</span>"
+msgstr ""
 
 #. module: tms
 #: model_terms:ir.ui.view,arch_db:tms.tms_services_form
 msgid "<span class=\"o_stat_text\">Facturas de Proveedor</span>"
-msgstr "<span class=\"o_stat_text\">Facturas de Proveedor</span>"
+msgstr ""
 
 #. module: tms
 #: model_terms:ir.ui.view,arch_db:tms.tms_services_form
 msgid "<span class=\"o_stat_text\">Ventas</span>"
-msgstr "<span class=\"o_stat_text\">Ventas</span>"
+msgstr ""
 
 #. module: tms
 #: model:ir.model.fields,field_description:tms.field_service_tms__message_needaction
@@ -255,7 +255,9 @@ msgstr "Moneda"
 #. module: tms
 #. odoo-python
 #: code:addons/tms/models/services.py:0 code:addons/tms/models/services.py:0
+#: code:addons/tms/models/services.py:0
 #: model:ir.model.fields,field_description:tms.field_service_tms__customer_ids
+#: model:ir.model.fields,field_description:tms.field_service_tms__customer_tree_ids
 #: model:ir.model.fields,field_description:tms.field_service_tms_supplier_customer_line__customer_id
 #: model_terms:ir.ui.view,arch_db:tms.tms_services_form
 #, python-format
@@ -356,7 +358,8 @@ msgstr "Borrador"
 
 #. module: tms
 #. odoo-python
-#: code:addons/tms/models/services.py:0
+#: code:addons/tms/models/services.py:0 code:addons/tms/models/services.py:0
+#: model:ir.model.fields,field_description:tms.field_service_tms__driver_tree_ids
 #: model:ir.model.fields,field_description:tms.field_service_tms_fleet_line__driver_id
 #, python-format
 msgid "Driver"
@@ -417,10 +420,12 @@ msgstr "Finalizado"
 #. module: tms
 #. odoo-python
 #: code:addons/tms/models/res_partner.py:0
+#: code:addons/tms/models/services.py:0 code:addons/tms/models/services.py:0
 #: code:addons/tms/models/services.py:0
 #: model:ir.model.fields,field_description:tms.field_res_partner__fleet_ids
 #: model:ir.model.fields,field_description:tms.field_res_users__fleet_ids
 #: model:ir.model.fields,field_description:tms.field_service_tms__fleet_ids
+#: model:ir.model.fields,field_description:tms.field_service_tms__fleet_tree_ids
 #: model:ir.ui.menu,name:tms.menu_label_fleet
 #: model_terms:ir.ui.view,arch_db:tms.view_res_partner_form_transporter
 #, python-format
@@ -510,7 +515,7 @@ msgstr "Hora de Inicio"
 #: model:ir.model.fields,field_description:tms.field_tms_address_type__id
 #: model:ir.model.fields,field_description:tms.field_tms_unit_type__id
 msgid "ID"
-msgstr "ID"
+msgstr ""
 
 #. module: tms
 #: model:ir.model.fields,field_description:tms.field_service_tms__activity_exception_icon
@@ -623,7 +628,7 @@ msgstr "Asiento contable"
 #. module: tms
 #: model_terms:ir.ui.view,arch_db:tms.tms_services_form
 msgid "KM"
-msgstr "KM"
+msgstr ""
 
 #. module: tms
 #: model:ir.model.fields,field_description:tms.field_service_tms__write_uid
@@ -683,10 +688,10 @@ msgstr "Lista de Tipos de Unidad"
 #. module: tms
 #. odoo-python
 #: code:addons/tms/models/services.py:0
-#: model:ir.model.fields,field_description:tms.field_service_tms__label_service
+#: model:ir.model.fields,field_description:tms.field_service_tms__material
 #, python-format
-msgid "Material/Reference"
-msgstr "Material/Referencia"
+msgid "Material"
+msgstr "Material"
 
 #. module: tms
 #: model:ir.model.fields,field_description:tms.field_service_tms__message_has_error
@@ -835,7 +840,9 @@ msgstr "N.º de servicio"
 #. module: tms
 #: model_terms:ir.actions.act_window,help:tms.res_partner_action_transport_companies
 msgid "Odoo helps you easily track all activities related to a supplier."
-msgstr "Odoo te ayuda a rastrear fácilmente todas las actividades relacionadas con un proveedor."
+msgstr ""
+"Odoo te ayuda a rastrear fácilmente todas las actividades relacionadas con "
+"un proveedor."
 
 #. module: tms
 #: model:ir.actions.act_window,name:tms.outsourced_fleet_vehicle_action
@@ -957,6 +964,14 @@ msgstr "Cantidad"
 #: model:ir.model.fields,field_description:tms.field_tms_unit_type__rating_ids
 msgid "Ratings"
 msgstr "Valoraciones"
+
+#. module: tms
+#. odoo-python
+#: code:addons/tms/models/services.py:0
+#: model:ir.model.fields,field_description:tms.field_service_tms__label_service
+#, python-format
+msgid "Reference"
+msgstr "Material/Referencia"
 
 #. module: tms
 #: model:ir.model.fields,field_description:tms.field_service_tms__activity_user_id
@@ -1144,7 +1159,9 @@ msgstr ""
 #. module: tms
 #. odoo-python
 #: code:addons/tms/models/services.py:0 code:addons/tms/models/services.py:0
+#: code:addons/tms/models/services.py:0
 #: model:ir.model.fields,field_description:tms.field_service_tms__supplier_ids
+#: model:ir.model.fields,field_description:tms.field_service_tms__supplier_tree_ids
 #: model:ir.model.fields,field_description:tms.field_service_tms_supplier_customer_line__supplier_id
 #: model_terms:ir.ui.view,arch_db:tms.tms_services_form
 #, python-format
@@ -1178,7 +1195,7 @@ msgstr "Proveedor de servicios del Sistema de Gestión de Transporte"
 #. module: tms
 #: model:ir.ui.menu,name:tms.tms_root
 msgid "TMS"
-msgstr "TMS"
+msgstr ""
 
 #. module: tms
 #. odoo-python
@@ -1201,7 +1218,7 @@ msgstr "El Tn descargado no puede ser mayor que el Tn cargado."
 #: code:addons/tms/models/services.py:0
 #: model:ir.model.fields,help:tms.field_service_tms__own_third_freight
 #, python-format
-msgid "The freight is third if this field is checked."
+msgid "The freight is third if this fields is checked."
 msgstr "El flete es tercero si este campo está marcado."
 
 #. module: tms
@@ -1265,7 +1282,7 @@ msgstr "Tn Neto"
 #. module: tms
 #: model_terms:ir.ui.view,arch_db:tms.tms_services_form
 msgid "Total"
-msgstr "Total"
+msgstr ""
 
 #. module: tms
 #: model:ir.ui.menu,name:tms.menu_account_supplier

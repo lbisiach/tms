@@ -9,6 +9,10 @@
             <tree string="Services">
                 <field name="name" />
                 <field name="label_service" />
+                <field name="driver_tree_ids" widget="many2many_tags"/>
+                <field name="fleet_tree_ids" widget="many2many_tags"/>
+                <field name="customer_tree_ids" widget="many2many_tags"/>
+                <field name="supplier_tree_ids" widget="many2many_tags"/>
                 <field name="date_start" widget="date" />
                 <field name="date_stop" widget="date" />
                 <field name="state" widget="badge" />
@@ -88,6 +92,7 @@
                     <group>
                         <group>
                             <field name="label_service" readonly="state == 'finalized'" />
+                            <field name="material" readonly="state == 'finalized'" />
                             <field name="own_third_freight" readonly="state == 'finalized'" />
                         </group>
                         <group>
@@ -101,7 +106,6 @@
                             <group>
                                 <group>
                                     <field name="show_hour" readonly="state == 'finalized'" />
-                                    
                                 </group>
                                 <group>
                                     <field name="distance" />
